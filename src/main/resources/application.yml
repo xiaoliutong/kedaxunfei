@@ -1,0 +1,30 @@
+server:
+  port: 8012
+spring:
+  datasource:
+    username: hz12345yw
+    url: jdbc:oracle:thin:@192.168.2.145:1521:orcl
+    password: hz12345yw
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true
+      open-in-view: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.OracleDialect
+
+
+TenantCode:
+  data: {建德市: 191020400, 富阳区: 191020300,淳安县: 191020200,桐庐县: 191020100 }
+
+
+RemoteUrl:
+  txCallSecondUrl: http://179.21.140.50:8070/mtkapi/COQuery/queryAgentStateInfo
+  txCallLogoUrl: http://179.21.140.50:8070/mtkapi/COQuery/queryCallInfo
+  txYwclZxsmUrl: http://179.21.140.50:8070/mtkapi/COQuery/queryAgentBusyInfo
+  txYwclZxxxUrl: http://179.21.140.50:8070/mtkapi/COQuery/queryAgentRestInfo
+  txAgentOperateUrl: http://179.21.140.50:8070/mtkapi/COQuery/queryAgentLogInfo
+
+corn: 0 0/2 * * * ?"
